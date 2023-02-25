@@ -28,8 +28,10 @@
   display: inline-block;
   }
   .main-container{
-  height: 620px;
-  background: blue
+    background-color: #2d197c;
+    height: 100vh;
+    width: 100vw;
+    position: relative;
   }
   .card{
     background-color: #fff;

@@ -24,7 +24,7 @@ class TodoRequest extends FormRequest
     public function rules()
     {
         return [
-            'content' => 'required',
+            'content' => 'required|between:1,20',
         ];
     }
 
@@ -32,6 +32,7 @@ class TodoRequest extends FormRequest
     {
         return [
         'content.required' => 'タスクを入力してください。',
+        'content.between' => 'タスクは20文字以内で入力してください。',
         ];
     } 
 }

@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\Todo;
 use App\Http\Requests\TodoRequest;
+use Illuminate\Support\Facades\Validator;
 
 class TodoController extends Controller
 {
@@ -22,7 +23,7 @@ class TodoController extends Controller
         return redirect('/');
     }
 
-        public function update(Request $request){
+        public function update(TodoRequest $request){
 
         if(!empty($request->content)){
             Todo::where('id', $request->id)->update(['content' => $request->content]);
